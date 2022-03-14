@@ -3,6 +3,9 @@ import logo from './logo.svg'
 import './App.css'
 import ShowInfo from './Components/ShowInfo'
 import Item from "./Components/Item"
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Pagination from "@mui/material/Pagination";
 function App() {  
   const [products,setProducts] = useState([
     {id:1,name: "Vu"},
@@ -20,6 +23,8 @@ function App() {
     <button onClick={() => setCount(count - 1)}>Decrease</button>
   {products.map((item,index) => <div>{item.name} <button onClick={()=> removeItem(item.id)}>Remove</button></div> )}
     <ShowInfo name="Vu"/>
+    <Button variant="contained">Hello World</Button>;
+    <Pagination count={10} color="primary" />
     </div>
   )
 }
